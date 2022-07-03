@@ -17,7 +17,7 @@ $feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <?php foreach( $feedbacks as $feedback): ?>
 <div class="block p-6 my-4 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><?= $feedback['feedback']?></h5>
-    <p class="font-normal text-gray-700 dark:text-gray-400"><?= $feedback['name']?></p>
+    <p class="font-normal text-gray-700 dark:text-gray-400"><?= $feedback['name']?> on <?= $feedback['date']?></p>
     <p class="font-small text-gray-700 dark:text-gray-400"><?= $feedback['email']?></p>
 </div>
 <?php endforeach ?>
